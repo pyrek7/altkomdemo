@@ -1,9 +1,15 @@
 pipeline {
     agent any
+    environment {
+        MainEnvConfig = 'someconfiguration'
+    }
     stages {
          stage('Env') {
+            when {
+                branch 'main'
+            }
             steps {
-                echo 'env selection goes here..'
+                echo "we need to do ${MainEnvConfig} in order to make it work"
             }
         } 
         stage('Scripts') {
