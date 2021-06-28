@@ -14,8 +14,16 @@ pipeline {
         } 
         stage('Scripts') {
             steps {
-                bat 'def a = "pawel"'
-                echo a
+               parallel (
+                   TaskOne{
+                       echo "task one line one"
+                       echo "task one line two"
+                   }
+                   TaskTwo{
+                        echo "task two line one"
+                       echo "task two line two"
+                   }
+               )
             }
         }
         stage('Build') {
