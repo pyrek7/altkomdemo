@@ -4,6 +4,7 @@ pipeline {
         MainEnvConfig = 'someconfiguration'
         dotnet = '"C:\\Program Files\\dotnet\\dotnet.exe"'
     }
+    triggers { cron('* * * * *') }
     stages {
          stage('Env') {
             when {
