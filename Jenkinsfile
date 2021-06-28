@@ -16,7 +16,9 @@ pipeline {
         stage('Scripts') {
               parallel (
                     "TaskOne" : {
+                        script{
                        def a = 5
+                        }
                     },
                     "TaskTwo" : {
                         echo 'tasl two stuff part 1'
