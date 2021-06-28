@@ -62,9 +62,9 @@ pipeline {
         }
         success
         {
-            mail to: 'fiderek@gmail.com'
-            subject: 'build info'
-            body: 'build success'
+            mail to: 'fiderek@gmail.com',
+            subject: "build info",
+            body: "build success"
         }
         failure
         {
