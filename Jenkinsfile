@@ -14,7 +14,7 @@ pipeline {
         } 
         stage('Scripts') {
             steps {
-                def a = "pawel"
+                sh def a = "pawel"
                 echo a
             }
         }
