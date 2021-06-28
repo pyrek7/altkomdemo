@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         MainEnvConfig = 'someconfiguration'
+        dotnet = '"C:\\Program Files\\dotnet\\dotnet.exe"'
     }
     stages {
          stage('Env') {
@@ -29,7 +30,9 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Building..'
+                dir("Calculator"){
+                    bat "${dotnet} build"
+                }
             }
         }
         stage('Test') {
