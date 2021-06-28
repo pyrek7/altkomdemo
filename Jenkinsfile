@@ -14,16 +14,17 @@ pipeline {
         } 
         stage('Scripts') {
             steps {
-               parallel (
-                   "TaskOne"{
-                       echo "task one line one"
-                       echo "task one line two"
-                   }
-                   "TaskTwo"{
-                        echo "task two line one"
-                       echo "task two line two"
-                   }
-               )
+              parallel (
+                    "TaskOne" : {
+                        echo 'task one stuff part 1'
+                        echo 'task one stuff part 2'
+                        echo 'task one stuff part 3'
+                    },
+                    "TaskTwo" : {
+                        echo 'tasl two stuff part 1'
+                        echo 'tasl two stuff part 2'
+                    }
+                    )
             }
         }
         stage('Build') {
