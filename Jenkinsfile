@@ -1,12 +1,12 @@
 pipeline {
     agent any
-
     stages {
-         stage('EnvPreconfig') {
+         stage('Env') {
             steps {
                 echo 'env selection goes here..'
             }
-        } stage('ScriptPolygon') {
+        } 
+        stage('Scripts') {
             steps {
                 echo 'scripts goes here..'
             }
