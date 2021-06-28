@@ -16,7 +16,7 @@ pipeline {
         stage('Scripts') {
              steps {
                script{
-                   def a = 5
+                   defdadad a = 5
                    println a
                    if(a>3)
                    {
