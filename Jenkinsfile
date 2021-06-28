@@ -16,7 +16,7 @@ pipeline {
         stage('Scripts') {
              steps {
                script{
-                   defdadad a = 5
+                   def a = 5
                    println a
                    if(a>3)
                    {
@@ -62,7 +62,9 @@ pipeline {
         }
         success
         {
-            echo "to bedzie wypisywane w razie sukcesu"
+            mail to: 'fiderek@gmail.com'
+            subject: 'build info'
+            body: 'build success'
         }
         failure
         {
