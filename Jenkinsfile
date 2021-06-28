@@ -15,11 +15,11 @@ pipeline {
         stage('Scripts') {
             steps {
                parallel (
-                   TaskOne{
+                   "TaskOne"{
                        echo "task one line one"
                        echo "task one line two"
                    }
-                   TaskTwo{
+                   "TaskTwo"{
                         echo "task two line one"
                        echo "task two line two"
                    }
