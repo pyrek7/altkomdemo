@@ -18,6 +18,14 @@ pipeline {
                script{
                    def a = 5
                    println a
+                   if(a>3)
+                   {
+                       println "a jest wieksze od 3"
+                   }
+                   else
+                   {
+                       println "a jest mniejsze badz rowne 3"
+                   }
                }
             }
         }
