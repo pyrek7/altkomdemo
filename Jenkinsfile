@@ -18,9 +18,8 @@ pipeline {
             steps {
               parallel (
                     "TaskOne" : {
-                        echo 'task one stuff part 1'
-                        echo 'task one stuff part 2'
-                        echo 'task one stuff part 3'
+                        sh 'def a = 5'
+                        sh 'echo a'
                     },
                     "TaskTwo" : {
                         echo 'tasl two stuff part 1'
