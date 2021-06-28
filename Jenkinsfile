@@ -4,7 +4,6 @@ pipeline {
         MainEnvConfig = 'someconfiguration'
         dotnet = '"C:\\Program Files\\dotnet\\dotnet.exe"'
     }
-    triggers { cron('* * * * *') }
     stages {
          stage('Env') {
             when {
@@ -18,8 +17,8 @@ pipeline {
             steps {
               parallel (
                     "TaskOne" : {
-                        sh 'def a = 5'
-                        sh 'echo a'
+                       def a = 5
+                       println a
                     },
                     "TaskTwo" : {
                         echo 'tasl two stuff part 1'
