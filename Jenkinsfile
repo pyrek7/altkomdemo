@@ -54,4 +54,19 @@ pipeline {
             }
         }
     }
+    post 
+    {
+        always
+        {
+            echo "to zawsze bedzie wypisywane"
+        }
+        success
+        {
+            echo "to bedzie wypisywane w razie sukcesu"
+        }
+        failure
+        {
+            echo "to bedzie wypisywane w razue faila"
+        }
+    }
 }
