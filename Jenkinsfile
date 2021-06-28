@@ -14,7 +14,8 @@ pipeline {
         } 
         stage('Scripts') {
             steps {
-                echo 'scripts goes here..'
+                def a = "pawel"
+                echo a
             }
         }
         stage('Build') {
