@@ -14,17 +14,12 @@ pipeline {
             }
         } 
         stage('Scripts') {
-              parallel (
-                    "TaskOne" : {
-                        script{
-                       def a = 5
-                        }
-                    },
-                    "TaskTwo" : {
-                        echo 'tasl two stuff part 1'
-                        echo 'tasl two stuff part 2'
-                    }
-                    )
+             steps {
+               script{
+                   def a = 5
+                   println a
+               }
+            }
         }
         stage('Build') {
             steps {
